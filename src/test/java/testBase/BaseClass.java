@@ -41,6 +41,7 @@ public class BaseClass {
 		if(br.equals("chrome")) {
 			ChromeOptions option = new ChromeOptions();
             option.addArguments("--remote-allow-origins=*");
+            
 		driver = new ChromeDriver(option);
 		}
 		else if(br.equals("edge")) {
