@@ -29,7 +29,7 @@ public class TC_002_AccountLoginTest extends BaseClass{
 		loginpage.clickLogin();
 		
 		boolean status = myaccountpage.isMyAccountPageExists();
-		Assert.assertEquals(status, true);
+            Assert.assertTrue(status);
 		}
 		catch(Exception e) {
 			logger.error("**** Test Failed ****");

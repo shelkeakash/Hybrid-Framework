@@ -31,21 +31,21 @@ public class TC_003_LoginDataDrivenTest extends BaseClass {
 		boolean status = myaccountpage.isMyAccountPageExists();
 		
 		if(exp.equals("Valid")) {
-			if(status==true) {
+			if(status) {
 				myaccountpage.clickMyAccount();
 				myaccountpage.clickLogout();
 				Assert.assertTrue(true);
 			}
 			else {
-				Assert.assertTrue(false);
+                Assert.fail();
 			}
 		}
 		
 		if(exp.equals("Invalid")) {
-			if(status==true) {
+			if(status) {
 				myaccountpage.clickMyAccount();
 				myaccountpage.clickLogout();
-				Assert.assertTrue(false);
+                Assert.fail();
 			}
 			else {
 				Assert.assertTrue(true);
